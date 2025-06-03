@@ -1,0 +1,580 @@
+{
+    "measurement.measured_date": {
+        "name": {
+            "ja": "分析年月日",
+            "en": "Measured date"
+        },
+        "schema": {
+            "type": "string",
+            "format": "date"
+        }
+    },
+    "measurement.reference": {
+        "name": {
+            "ja": "参考文献",
+            "en": "Reference"
+        },
+        "schema": {
+            "type": "string"
+        }
+    },
+    "measurement.specimen": {
+        "name": {
+            "ja": "試料",
+            "en": "Specimen"
+        },
+        "schema": {
+            "type": "string"
+        }
+    },
+    "operator_identifier": {
+        "name": {
+            "ja": "測定者",
+            "en": "Operator identifier"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "Operator"
+    },
+    "operator_affiliation_identifier": {
+        "name": {
+            "ja": "測定者所属機関",
+            "en": "Operator affiliation identifier"
+        },
+        "schema": {
+            "type": "string"
+        }
+    },
+    "institution_idendfier": {
+        "name": {
+            "ja": "所属施設など",
+            "en": "Institution idendfier"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "Institution"
+    },
+    "measurement_technique": {
+        "name": {
+            "ja": "測定手法",
+            "en": "Measurement Technique"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "Technique"
+    },
+    "measurement_instrument": {
+        "name": {
+            "ja": "測定装置",
+            "en": "Measurement Instrument"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "InstrumentModel"
+    },
+    "experiment_id": {
+        "name": {
+            "ja": "測定内容識別ID",
+            "en": "Experiment ID"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "ExperimentID"
+    },
+    "file_property": {
+        "name": {
+            "ja": "測定ファイル_属性",
+            "en": "File Property"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "FileType"
+    },
+    "sputtering_ion_energy": {
+        "name": {
+            "ja": "イオンスパッタリングビームエネルギー",
+            "en": "Sputtering Ion Energy"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "SputterEnergy",
+        "unit": "kV",
+        "originalType": "number"
+    },
+    "sputtering_raster_area": {
+        "name": {
+            "ja": "スパッタリングラスター範囲",
+            "en": "Sputtering Raster Area"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "SputterRaster",
+        "unit": "mm"
+    },
+    "specimen_stage_rotation_setting_during_sputtering": {
+        "name": {
+            "ja": "スパッタ時試料台回転設定",
+            "en": "Specimen Stage Rotation Setting During Sputtering"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "SampleRotation"
+    },
+    "depth_profiling_preset_layer_number": {
+        "name": {
+            "ja": "デプスプロファイルスパッタ条件設定レイヤー数",
+            "en": "Depth Profiling Preset Layer Number"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "NoDepthReg",
+        "originalType": "number"
+    },
+    "time_from_sputtering_to_measurement": {
+        "name": {
+            "ja": "スパッタ後測定開始待機時間",
+            "en": "Time from Sputtering to Measurement"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "ProfSputterDelay",
+        "unit": "s",
+        "originalType": "number"
+    },
+    "total_cycle_number": {
+        "name": {
+            "ja": "総サイクル数",
+            "en": "Total Cycle Number"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalType": "number"
+    },
+    "cycle_control_preset": {
+        "name": {
+            "ja": "サイクル制御設定",
+            "en": "Cycle Control Preset"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "variable": 1
+    },
+    "software_preset_sputtering_layer_name": {
+        "name": {
+            "ja": "ソフトウェア上設定レイヤー名",
+            "en": "Software Preset Sputtering Layer Name"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "variable": 1
+    },
+    "sputtering_layer_preset_interval_time": {
+        "name": {
+            "ja": "スパッタレイヤー設定スパッタインターバル時間",
+            "en": "Sputtering Layer Preset Interval Time"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "unit": "min",
+        "originalType": "number",
+        "variable": 1
+    },
+    "sputtering_layer_preset_cycle_number": {
+        "name": {
+            "ja": "スパッタレイヤー設定サイクル数",
+            "en": "Sputtering Layer Preset Cycle Number"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalType": "number",
+        "variable": 1
+    },
+    "sample_normal_polar_angle_of_tilt": {
+        "name": {
+            "ja": "試料法線極角",
+            "en": "sample normal polar angle of tilt"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "unit": "deg",
+        "originalType": "number",
+        "variable": 1
+    },
+    "sample_normal_tilt_azimuth": {
+        "name": {
+            "ja": "試料法線方位角",
+            "en": "sample normal tilt azimuth"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "unit": "deg",
+        "originalType": "number",
+        "variable": 1
+    },
+    "sample_rotation_angle": {
+        "name": {
+            "ja": "試料回転角",
+            "en": "sample rotation angle"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "unit": "deg",
+        "originalType": "number",
+        "variable": 1
+    },
+    "peak_name": {
+        "name": {
+            "ja": "ピーク名",
+            "en": "Peak Name"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "SpectralRegDef",
+        "variable": 1
+    },
+    "transitions": {
+        "name": {
+            "ja": "スペクトルの元素種の遷移",
+            "en": "Transitions"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "variable": 1
+    },
+    "pass_energy": {
+        "name": {
+            "ja": "パスエネルギー値",
+            "en": "Pass Energy"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "SpectralRegDef",
+        "unit": "eV",
+        "originalType": "number",
+        "variable": 1
+    },
+    "abscissa_start": {
+        "name": {
+            "ja": "横軸の起点",
+            "en": "Abscissa start"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "SpectralRegDef",
+        "unit": "eV",
+        "originalType": "number",
+        "variable": 1
+    },
+    "abscissa_end": {
+        "name": {
+            "ja": "横軸の終点",
+            "en": "Abscissa end"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "SpectralRegDef",
+        "unit": "eV",
+        "originalType": "number",
+        "variable": 1
+    },
+    "abscissa_increment": {
+        "name": {
+            "ja": "エネルギーステップ幅",
+            "en": "Abscissa increment"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "SpectralRegDef",
+        "unit": "eV",
+        "originalType": "number",
+        "variable": 1
+    },
+    "collection_time": {
+        "name": {
+            "ja": "シグナル収集時間（データ1点当たりの溜め込み時間）",
+            "en": "Collection time"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "SpectralRegDef",
+        "unit": "s",
+        "originalType": "number",
+        "variable": 1
+    },
+    "measurement_acquisition_number_per_peak_sweep": {
+        "name": {
+            "ja": "スイープ毎繰返し測定回数",
+            "en": "Measurement Acquisition Number Per Peak Sweep"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "SurvNumCycles",
+        "originalType": "number",
+        "variable": 1
+    },
+    "peak_sweep_number": {
+        "name": {
+            "ja": "ピークスイープ積算回数",
+            "en": "Peak Sweep Number"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "SpectralRegDef2",
+        "originalType": "number",
+        "variable": 1
+    },
+    "total_acquisition_number": {
+        "name": {
+            "ja": "総積算回数",
+            "en": "Total Acquisition Number"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "SpectralRegDef2",
+        "originalType": "number",
+        "variable": 1
+    },
+    "xray_source": {
+        "name": {
+            "ja": "X線源",
+            "en": "Xray Source"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "XraySource",
+        "variable": 1
+    },
+    "xray_power": {
+        "name": {
+            "ja": "X線パワー",
+            "en": "Xray Power"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "XrayPower",
+        "unit": "W",
+        "originalType": "number",
+        "variable": 1
+    },
+    "analysis_source_label": {
+        "name": {
+            "ja": "分析線源ラベル",
+            "en": "analysis source label"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "variable": 1
+    },
+    "analysis_source_characteristics_energy": {
+        "name": {
+            "ja": "分析線源特性エネルギー",
+            "en": "analysis source characteristics energy"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "unit": "eV",
+        "originalType": "number",
+        "variable": 1
+    },
+    "analysis_source_beam_width_x": {
+        "name": {
+            "ja": "分析線源ビーム幅x",
+            "en": "analysis source beam width x"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "unit": "um",
+        "originalType": "number",
+        "variable": 1
+    },
+    "analysis_source_beam_width_y": {
+        "name": {
+            "ja": "分析線源ビーム幅y",
+            "en": "analysis source beam width y"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "unit": "um",
+        "originalType": "number",
+        "variable": 1
+    },
+    "xray_beam_diameter": {
+        "name": {
+            "ja": "X線ビーム径",
+            "en": "Xray Beam Diameter"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "XrayBeamDiameter",
+        "unit": "um",
+        "originalType": "number",
+        "variable": 1
+    },
+    "analysis_source_polar_angle_of_incidence": {
+        "name": {
+            "ja": "分析線源入射極角",
+            "en": "analysis source polar angle of incidence"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "unit": "deg",
+        "originalType": "number",
+        "variable": 1
+    },
+    "analysis_source_azimuth": {
+        "name": {
+            "ja": "分析線源方位角",
+            "en": "analysis source azimuth"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "unit": "deg",
+        "originalType": "number",
+        "variable": 1
+    },
+    "analyzer_mode": {
+        "name": {
+            "ja": "分析器分光動作モード",
+            "en": "Analyzer Mode"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "AnalyserMode",
+        "variable": 1
+    },
+    "analyzer_work_function": {
+        "name": {
+            "ja": "分析器仕事関数",
+            "en": "Analyzer Work Function"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "AnalyserWorkFcn",
+        "unit": "eV",
+        "originalType": "number",
+        "variable": 1
+    },
+    "xray_analyzer_angle": {
+        "name": {
+            "ja": "照射X線 分析器間角度",
+            "en": "Xray Analyzer Angle"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "SourceAnalyserAngle",
+        "unit": "deg",
+        "originalType": "number",
+        "variable": 1
+    },
+    "analyzer_solid_angle": {
+        "name": {
+            "ja": "分析器取込立体角度",
+            "en": "Analyzer Solid Angle"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "AnalyserSolidAngle",
+        "unit": "sr",
+        "originalType": "number",
+        "variable": 1
+    },
+    "signal_mode": {
+        "name": {
+            "ja": "信号モード",
+            "en": "signal mode"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "variable": 1
+    },
+    "analysis_region": {
+        "name": {
+            "ja": "測定領域設定",
+            "en": "Analysis Region"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "ImageSizeXY",
+        "variable": 1
+    },
+    "analysis_width_x": {
+        "name": {
+            "ja": "X成分",
+            "en": "Analysis Width_x"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "ImageSizeXY",
+        "unit": "um",
+        "originalType": "number",
+        "variable": 1
+    },
+    "analysis_width_y": {
+        "name": {
+            "ja": "Y成分",
+            "en": "Analysis Width_y"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "ImageSizeXY",
+        "unit": "um",
+        "originalType": "number",
+        "variable": 1
+    },
+    "comment": {
+        "name": {
+            "ja": "コメント",
+            "en": "Comment"
+        },
+        "schema": {
+            "type": "string"
+        },
+        "originalName": "SpatialAreaDesc"
+    }
+}
