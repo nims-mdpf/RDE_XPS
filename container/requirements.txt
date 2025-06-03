@@ -1,0 +1,18 @@
+--trusted-host pypi.org
+--trusted-host pypi.python.org
+--trusted-host=files.pythonhosted.org
+# PyPI library used in all projects
+matplotlib==3.9.2
+rdetoolkit==1.2.0
+# PyPI libraries to be customized and installed in each project
+contourpy==1.1.0
+cycler==0.11.0
+fonttools==4.42.1
+kiwisolver==1.4.5
+Pillow==10.4.0
+plotly==5.23.0
+pydantic-xml==2.9.0
+pyparsing==3.1.1
+types-pyyaml==6.0.12.20240808
+scipy==1.13.0
+xlrd==2.0.1

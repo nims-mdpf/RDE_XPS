@@ -1,0 +1,244 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://rde.nims.go.jp/rde/dataset-templates/NIMS_XPS/invoice.schema.json",
+    "description": "固有情報と試料情報のスキーマ",
+    "type": "object",
+    "required": [
+      "custom",
+      "sample"
+    ],
+    "properties": {
+      "custom": {
+        "type": "object",
+        "label": {
+          "ja": "固有情報",
+          "en": "Specific Information"
+        },
+        "required": [
+          "no3dimage"
+        ],
+        "properties": {
+          "flood_gun_voltage": {
+            "type": "number",
+            "label": {
+              "ja": "中和電子銃の加速電圧",
+              "en": "Flood Gun Voltage"
+            },
+            "options": {
+              "unit": "V"
+            }
+          },
+          "flood_gun_emission_current": {
+            "type": "number",
+            "label": {
+              "ja": "中和電子銃の電流",
+              "en": "Flood Gun Emission Current"
+            },
+            "options": {
+              "unit": "uA"
+            }
+          },
+          "ion_gun_voltage": {
+            "type": "number",
+            "label": {
+              "ja": "中和イオン銃の加速電圧",
+              "en": "Ion Gun Voltage"
+            },
+            "options": {
+              "unit": "V"
+            }
+          },
+          "analysis_field": {
+            "type": "string",
+            "label": {
+              "ja": "分析分野",
+              "en": "Analysis field"
+            }
+          },
+          "sample_position": {
+            "type": "string",
+            "label": {
+              "ja": "試料位置",
+              "en": "Sample Position"
+            }
+          },
+          "sample_condition": {
+            "type": "string",
+            "label": {
+              "ja": "試料状態",
+              "en": "Sample Condition"
+            }
+          },
+          "no3dimage": {
+            "type": "number",
+            "enum": [
+              0,
+              1
+            ],
+            "label": {
+              "ja": "3D画像を作成しない(ang, proの場合のみ有効)",
+              "en": "Not Create 3D Image (only for ang or pro)"
+            },
+            "default": 1
+          },
+          "key1": {
+              "type": "string",
+              "label": {
+                  "ja": "キー1",
+                  "en": "key1"
+              }
+          },
+          "key2": {
+              "type": "string",
+              "label": {
+                  "ja": "キー2",
+                  "en": "key2"
+              }
+          },
+          "key3": {
+              "type": "string",
+              "label": {
+                  "ja": "キー3",
+                  "en": "key3"
+              }
+          },
+          "key4": {
+              "type": "string",
+              "label": {
+                  "ja": "キー4",
+                  "en": "key4"
+              }
+          },
+          "key5": {
+              "type": "string",
+              "label": {
+                  "ja": "キー5",
+                  "en": "key5"
+              }
+          },
+          "common_data_type": {
+            "label": {
+              "ja": "登録データタイプ",
+              "en": "Data type"
+            },
+            "type": "string",
+            "default": "XPS"
+          },
+          "common_data_origin": {
+            "type": "string",
+            "label": {
+              "ja": "データの起源",
+              "en": "Data Origin"
+            },
+            "default": "experiments"
+          },
+          "common_technical_category": {
+            "type": "string",
+            "label": {
+              "ja": "技術カテゴリー",
+              "en": "Technical Category"
+            },
+            "default": "measurement"
+          },
+          "common_reference": {
+            "type": "string",
+            "label": {
+              "ja": "参考文献",
+              "en": "Reference"
+            }
+          },
+          "measurement_method_category": {
+            "type": "string",
+            "label": {
+              "ja": "計測法カテゴリー",
+              "en": "Method category"
+            },
+            "default": "分光法"
+          },
+          "measurement_method_sub_category": {
+            "type": "string",
+            "label": {
+              "ja": "計測法サブカテゴリー",
+              "en": "Method sub-category"
+            },
+            "default": "X線光電子分光法"
+          },
+          "measurement_analysis_field": {
+            "type": "string",
+            "label": {
+              "ja": "分析分野",
+              "en": "Analysis field"
+            }
+          },
+          "measurement_measurement_environment": {
+            "type": "string",
+            "label": {
+              "ja": "測定環境",
+              "en": "Measurement environment"
+            },
+            "default": "真空中"
+          },
+          "measurement_energy_level_transition_structure_etc_of_interst": {
+            "type": "string",
+            "label": {
+              "ja": "対象準位_遷移_構造",
+              "en": "Energy level_transition_structure etc. of interst"
+            }
+          },
+          "measurement_measured_date": {
+            "type": "string",
+            "label": {
+              "ja": "分析年月日",
+              "en": "Measured date"
+            },
+            "format": "date",
+            "options": {
+              "placeholder": {
+                "ja": "装置情報から自動取得します",
+                "en": "Automatically get from device output"
+              }
+            }
+          },
+          "measurement_standardized_procedure": {
+            "type": "string",
+            "label": {
+              "ja": "標準手順",
+              "en": "Standardized procedure"
+            }
+          },
+          "measurement_instrumentation_site": {
+            "type": "string",
+            "label": {
+              "ja": "装置設置場所",
+              "en": "Instrumentation site"
+            }
+          }
+        }
+      },
+      "sample": {
+        "type": "object",
+        "label": {
+          "ja": "試料情報",
+          "en": "Sample Information"
+        },
+        "properties": {
+          "generalAttributes": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "required": [
+                  "termId"
+                ],
+                "properties": {
+                  "termId": {
+                    "const": "3adf9874-7bcb-e5f8-99cb-3d6fd9d7b55e"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }

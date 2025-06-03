@@ -1,0 +1,9 @@
+system:
+  # extended_mode: MultiDataTile
+  magic_variable: true
+  save_thumbnail_image: true
+
+xps:
+  manufacturer: scienta_omicron
+  no3dimage: 1
+  axis_inverse_x: true
