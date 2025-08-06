@@ -1,0 +1,45 @@
+{
+    "datasetId": "05d91602-3921-453a-8b91-d844babxxxxx",
+    "basic": {
+        "dateSubmitted": "2025-05-14",
+        "dataOwnerId": "051d5eab8a6a8bea98f07bbdb6f7eac8623c54783930316135xxxxxx",
+        "dataName": "samle data",
+        "instrumentId": null,
+        "experimentId": null,
+        "description": ""
+    },
+    "custom": {
+        "key1": null,
+        "key2": null,
+        "key3": null,
+        "key4": null,
+        "key5": null,
+        "common_data_type": "XPS",
+        "common_data_origin": "experiments",
+        "common_technical_category": "measurement",
+        "common_reference": null,
+        "measurement_method_category": "分光法",
+        "measurement_method_sub_category": "X線光電子分光法",
+        "measurement_analysis_field": null,
+        "measurement_measurement_environment": "真空中",
+        "measurement_energy_level_transition_structure_etc_of_interst": null,
+        "measurement_measured_date": null,
+        "measurement_standardized_procedure": null,
+        "measurement_instrumentation_site": null
+    },
+    "sample": {
+        "names": [
+            "taka_sample"
+        ],
+        "composition": null,
+        "referenceUrl": null,
+        "description": null,
+        "generalAttributes": [
+            {
+                "termId": "3adf9874-7bcb-e5f8-99cb-3d6fd9d7b55e",
+                "value": null
+            }
+        ],
+        "ownerId": "051d5eab8a6a8bea98f07bbdb6f7eac8623c54783930316135xxxxxx"
+    }
+}
