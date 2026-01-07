@@ -6,7 +6,7 @@
         },
         "schema": {
             "type": "string",
-            "format": "date"
+            "format": "date-time"
         }
     },
     "measurement.reference": {
@@ -35,7 +35,7 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "Operator"
+        "original_name": "Operator"
     },
     "operator_affiliation_identifier": {
         "name": {
@@ -54,7 +54,7 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "Institution"
+        "original_name": "Institution"
     },
     "measurement_technique": {
         "name": {
@@ -64,7 +64,7 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "Technique"
+        "original_name": "Technique"
     },
     "measurement_instrument": {
         "name": {
@@ -74,7 +74,7 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "InstrumentModel"
+        "original_name": "InstrumentModel"
     },
     "experiment_id": {
         "name": {
@@ -84,7 +84,7 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "ExperimentID"
+        "original_name": "ExperimentID"
     },
     "file_property": {
         "name": {
@@ -94,7 +94,7 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "FileType"
+        "original_name": "FileType"
     },
     "sputtering_ion_energy": {
         "name": {
@@ -104,9 +104,9 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "SputterEnergy",
         "unit": "kV",
-        "originalType": "number"
+        "original_name": "SputterEnergy",
+        "original_type": "number"
     },
     "sputtering_raster_area": {
         "name": {
@@ -116,8 +116,8 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "SputterRaster",
-        "unit": "mm"
+        "unit": "mm",
+        "original_name": "SputterRaster"
     },
     "specimen_stage_rotation_setting_during_sputtering": {
         "name": {
@@ -127,7 +127,7 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "SampleRotation"
+        "original_name": "SampleRotation"
     },
     "depth_profiling_preset_layer_number": {
         "name": {
@@ -137,8 +137,8 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "NoDepthReg",
-        "originalType": "number"
+        "original_name": "NoDepthReg",
+        "original_type": "number"
     },
     "time_from_sputtering_to_measurement": {
         "name": {
@@ -148,9 +148,9 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "ProfSputterDelay",
         "unit": "s",
-        "originalType": "number"
+        "original_name": "ProfSputterDelay",
+        "original_type": "number"
     },
     "total_cycle_number": {
         "name": {
@@ -160,7 +160,7 @@
         "schema": {
             "type": "string"
         },
-        "originalType": "number"
+        "original_type": "number"
     },
     "cycle_control_preset": {
         "name": {
@@ -191,8 +191,8 @@
             "type": "string"
         },
         "unit": "min",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_type": "number"
     },
     "sputtering_layer_preset_cycle_number": {
         "name": {
@@ -202,8 +202,8 @@
         "schema": {
             "type": "string"
         },
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_type": "number"
     },
     "sample_normal_polar_angle_of_tilt": {
         "name": {
@@ -214,8 +214,8 @@
             "type": "string"
         },
         "unit": "deg",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_type": "number"
     },
     "sample_normal_tilt_azimuth": {
         "name": {
@@ -226,8 +226,8 @@
             "type": "string"
         },
         "unit": "deg",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_type": "number"
     },
     "sample_rotation_angle": {
         "name": {
@@ -238,8 +238,8 @@
             "type": "string"
         },
         "unit": "deg",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_type": "number"
     },
     "peak_name": {
         "name": {
@@ -249,8 +249,8 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "SpectralRegDef",
-        "variable": 1
+        "variable": 1,
+        "original_name": "SpectralRegDef"
     },
     "transitions": {
         "name": {
@@ -270,10 +270,10 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "SpectralRegDef",
         "unit": "eV",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_name": "SpectralRegDef",
+        "original_type": "number"
     },
     "abscissa_start": {
         "name": {
@@ -283,10 +283,10 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "SpectralRegDef",
         "unit": "eV",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_name": "SpectralRegDef",
+        "original_type": "number"
     },
     "abscissa_end": {
         "name": {
@@ -296,10 +296,10 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "SpectralRegDef",
         "unit": "eV",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_name": "SpectralRegDef",
+        "original_type": "number"
     },
     "abscissa_increment": {
         "name": {
@@ -309,10 +309,10 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "SpectralRegDef",
         "unit": "eV",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_name": "SpectralRegDef",
+        "original_type": "number"
     },
     "collection_time": {
         "name": {
@@ -322,10 +322,10 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "SpectralRegDef",
         "unit": "s",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_name": "SpectralRegDef",
+        "original_type": "number"
     },
     "measurement_acquisition_number_per_peak_sweep": {
         "name": {
@@ -335,9 +335,9 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "SurvNumCycles",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_name": "SurvNumCycles",
+        "original_type": "number"
     },
     "peak_sweep_number": {
         "name": {
@@ -347,9 +347,9 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "SpectralRegDef2",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_name": "SpectralRegDef2",
+        "original_type": "number"
     },
     "total_acquisition_number": {
         "name": {
@@ -359,9 +359,9 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "SpectralRegDef2",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_name": "SpectralRegDef2",
+        "original_type": "number"
     },
     "xray_source": {
         "name": {
@@ -371,8 +371,8 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "XraySource",
-        "variable": 1
+        "variable": 1,
+        "original_name": "XraySource"
     },
     "xray_power": {
         "name": {
@@ -382,10 +382,10 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "XrayPower",
         "unit": "W",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_name": "XrayPower",
+        "original_type": "number"
     },
     "analysis_source_label": {
         "name": {
@@ -406,8 +406,8 @@
             "type": "string"
         },
         "unit": "eV",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_type": "number"
     },
     "analysis_source_beam_width_x": {
         "name": {
@@ -418,8 +418,8 @@
             "type": "string"
         },
         "unit": "um",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_type": "number"
     },
     "analysis_source_beam_width_y": {
         "name": {
@@ -430,8 +430,8 @@
             "type": "string"
         },
         "unit": "um",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_type": "number"
     },
     "xray_beam_diameter": {
         "name": {
@@ -441,10 +441,10 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "XrayBeamDiameter",
         "unit": "um",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_name": "XrayBeamDiameter",
+        "original_type": "number"
     },
     "analysis_source_polar_angle_of_incidence": {
         "name": {
@@ -455,8 +455,8 @@
             "type": "string"
         },
         "unit": "deg",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_type": "number"
     },
     "analysis_source_azimuth": {
         "name": {
@@ -467,8 +467,8 @@
             "type": "string"
         },
         "unit": "deg",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_type": "number"
     },
     "analyzer_mode": {
         "name": {
@@ -478,8 +478,8 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "AnalyserMode",
-        "variable": 1
+        "variable": 1,
+        "original_name": "AnalyserMode"
     },
     "analyzer_work_function": {
         "name": {
@@ -489,10 +489,10 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "AnalyserWorkFcn",
         "unit": "eV",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_name": "AnalyserWorkFcn",
+        "original_type": "number"
     },
     "xray_analyzer_angle": {
         "name": {
@@ -502,10 +502,10 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "SourceAnalyserAngle",
         "unit": "deg",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_name": "SourceAnalyserAngle",
+        "original_type": "number"
     },
     "analyzer_solid_angle": {
         "name": {
@@ -515,10 +515,10 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "AnalyserSolidAngle",
         "unit": "sr",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_name": "AnalyserSolidAngle",
+        "original_type": "number"
     },
     "signal_mode": {
         "name": {
@@ -538,8 +538,8 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "ImageSizeXY",
-        "variable": 1
+        "variable": 1,
+        "original_name": "ImageSizeXY"
     },
     "analysis_width_x": {
         "name": {
@@ -549,10 +549,10 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "ImageSizeXY",
         "unit": "um",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_name": "ImageSizeXY",
+        "original_type": "number"
     },
     "analysis_width_y": {
         "name": {
@@ -562,10 +562,10 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "ImageSizeXY",
         "unit": "um",
-        "originalType": "number",
-        "variable": 1
+        "variable": 1,
+        "original_name": "ImageSizeXY",
+        "original_type": "number"
     },
     "comment": {
         "name": {
@@ -575,6 +575,6 @@
         "schema": {
             "type": "string"
         },
-        "originalName": "SpatialAreaDesc"
+        "original_name": "SpatialAreaDesc"
     }
 }

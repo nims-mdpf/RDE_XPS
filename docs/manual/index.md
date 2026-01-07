@@ -302,3 +302,14 @@ def dataset(srcpaths: RdeInputDirPaths, resource_paths: RdeOutputResourcePath) -
     if suffix in [".spe", ".pro", ".ang"]:
         module.invoice_writer.overwrite_invoice_measured_date(suffix, resource_paths, meta)
 ```
+
+## データセットテンプレートシートについて
+
+　メタデータ定義(metadata-def.json)、送状定義(invoice.schema.json)、カタログ定義(catalog.schema.json)をエクセル形式のシートから生成することができるツールを以下に用意してあります。
+
+[RDE/データセットテンプレート生成、確認ツール](https://github.com/nims-mdpf/RDE_datasettemplate-schemafile-make-tool)
+
+　上記のツールで利用可能な本データセットテンプレート用のデータセットテンプレートシートは以下の通りです。
+
+- [templates/scienta-omicron用](./RDEDatasetTemplateSheet_RDE_XPS_scienta_omicron.xlsx)
+- [templates/ulvac-phi用](./RDEDatasetTemplateSheet_RDE_XPS_ulvac_phi.xlsx)
