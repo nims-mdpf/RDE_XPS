@@ -1,4 +1,4 @@
-# RDE XPS用テンプレート
+# XPS用テンプレート
 
 ## 概要
 XPSをご利用の方に適したテンプレートです。以下の装置メーカーに対応しています。
@@ -16,25 +16,25 @@ XPSの専門家によって監修されたメタ情報を上記ファイルか�
 ## 基本情報
 
 ### コンテナ情報
-- 【コンテナ名】nims_mdpf_share_xps:v1.0
+- 【コンテナ名】nims_mdpf_share_xps:v1.2
 
 ### テンプレート情報
 - DT0011:
-    - 【データセットテンプレートID】NIMS_DT0011_XPS_ULVAC-PHI_v1.0
+    - 【データセットテンプレートID】NIMS_DT0011_XPS_ULVAC-PHI_v1.2
     - 【データセットテンプレート名日本語】XPS ULVAC-PHI データセットテンプレート
     - 【データセットテンプレート名英語】XPS ULVAC-PHI dataset-template
     - 【データセットテンプレートの説明】ULVAC-PHIのXPSをご利用の方に適したモードです。spe/pro/angフォーマットでデータを取得されている方がご利用いただけます。 XPSの専門家によって監修されたメタ情報をspe/pro/angファイルから自動的にRDEが抽出します。 
-    - 【バージョン】1.0
+    - 【バージョン】1.2
     - 【データセット種別】加工・計測レシピ型
     - 【データ構造化】あり (システム上「あり」を選択)
     - 【取り扱い事業】NIMS研究および共同研究プロジェクト (PROGRAM)
     - 【装置名】(なし。装置情報を紐づける場合はこのテンプレートを複製し、装置情報を設定すること。)
 - DT0012:
-    - 【データセットテンプレートID】NIMS_DT0012_XPS_ScientaOmicron_v1.0
+    - 【データセットテンプレートID】NIMS_DT0012_XPS_ScientaOmicron_v1.2
     - 【データセットテンプレート名日本語】XPS Scienta Omicron データセットテンプレート
     - 【データセットテンプレート名英語】XPS Scienta Omicron dataset-template
     - 【データセットテンプレートの説明】Scienta OmicronのXPSをご利用の方に適したモードです。vmsフォーマットでデータを取得されている方がご利用いただけます。 XPSの専門家によって監修されたメタ情報をvmsファイルから自動的にRDEが抽出します。  
-    - 【バージョン】1.0
+    - 【バージョン】1.2
     - 【データセット種別】加工・計測レシピ型
     - 【データ構造化】あり (システム上「あり」を選択)
     - 【取り扱い事業】NIMS研究および共同研究プロジェクト (PROGRAM)
@@ -89,10 +89,18 @@ xps
 │   ├── pyproject.toml
 │   ├── requirements-test.txt
 │   ├── requirements.txt
+│   ├── tests (テストコード)
 │   └── tox.ini
 ├── docs (ドキュメント)
 │   ├── manual (マニュアル)
 │   └── requirement_analysis (要件定義)
+├── inputdata (サンプルデータ)
+│   └── scienta-omicron (Scienta Omicron向け)
+│   │   └── vms (vmsフォーマット: 1ブロック、複数ブロック)
+│   └── ulvac_phi (ULVAC-PHI向け)
+│       ├── spe (speフォーマット: 1元素、複数元素)
+│       ├── pro (proフォーマット)
+│       └── ang (angフォーマット)
 └── template (テンプレート群)
      ├── scienta-omicron (Scienta Omicron向け)
      │   ├── batch.yaml
@@ -154,8 +162,8 @@ xps
 - ツリー表示タブではタクソノミーにしたがってデータを階層表示する。データ名をクリックして詳細を閲覧する。
 
 ### 動作環境
-- Python: 3.11
-- RDEToolKit: 1.2.0
+- Python: 3.12
+- RDEToolKit: 1.7.1
 
 ## 入力ファイルから抽出するメタデータを追加(変更)する場合
 - 入力ファイルから抽出するメタデータを追加(変更)する場合、以下のファイルを修正する必要があります。

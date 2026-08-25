@@ -53,7 +53,7 @@ class FileReader(XpsFileReader):
 
         # Merge profile data for all energy levels
         df_singles = []
-        for data_block, data_single in zip(data_blocks, data_org):
+        for data_block, data_single in zip(data_blocks, data_org, strict=False):
             if data_block["is_profile"]:
                 file_name_ext = data_block["AtomicName"]
 
@@ -80,7 +80,7 @@ class FileReader(XpsFileReader):
         z_list = data.iloc[:, 0].values
 
         data_atoms = []
-        for data_block, data_single in zip(data_blocks, data_org):
+        for data_block, data_single in zip(data_blocks, data_org, strict=False):
             if not data_block["is_profile"]:
                 atomic_data = self._save_spectrum_data(
                     data_block,
@@ -110,9 +110,9 @@ class FileReader(XpsFileReader):
             out_dir = PureWindowsPath(resource_paths.struct)
         else:
             cmds = []
-            file_path_input = resource_paths.rawfiles[0]  # type: ignore
-            log_dir = resource_paths.logs  # type: ignore
-            out_dir = resource_paths.struct  # type: ignore
+            file_path_input = resource_paths.rawfiles[0]
+            log_dir = resource_paths.logs
+            out_dir = resource_paths.struct
 
         cmds += [
             str(self.MPEXPORT_BINPATH),

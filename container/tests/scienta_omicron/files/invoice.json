@@ -1,0 +1,37 @@
+{
+  "datasetId" : "5c84d23b-1234-4840-5678-394ccc50cbb5",
+  "basic" : {
+    "dateSubmitted" : "2023-03-28",
+    "dataOwnerId" : "1234f4b83412b7834765929ca12afb8907b953cd3634356431373533",
+    "dataName" : "XPS.vms",
+    "instrumentId" : "1b4b5634-656e-4f07-1234-5c5b30885cfc",
+    "experimentId" : null,
+    "description" : "Ga gas照射 1 秒"
+  },
+  "custom" : {
+    "common_data_type" : "XPS",
+    "common_data_origin" : "experiments",
+    "common_technical_category" : "measurement",
+    "common_reference" : null,
+    "measurement_method_category" : null,
+    "measurement_method_sub_category" : null,
+    "measurement_analysis_field" : null,
+    "measurement_measurement_environment" : null,
+    "measurement_energy_level_transition_structure_etc_of_interst" : null,
+    "measurement_measured_date" : null,
+    "measurement_standardized_procedure" : null,
+    "measurement_instrumentation_site" : null
+  },
+  "sample" : {
+    "sampleId" : "254cec7b-1234-47f1-5678-1cde0dfaadbb",
+    "names" : [ "Ga_XPS" ],
+    "composition" : null,
+    "referenceUrl" : null,
+    "description" : "ガリウム基板",
+    "generalAttributes" : [ {
+      "termId" : "3adf9874-7bcb-e5f8-99cb-3d6fd9d7b55e",
+      "value" : "Ga"
+    } ],
+    "ownerId" : "1234f4b83412b7834765929ca12afb8907b953cd3634356431373533"
+  }
+}
