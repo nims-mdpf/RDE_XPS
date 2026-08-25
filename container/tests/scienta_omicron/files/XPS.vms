@@ -1,0 +1,75 @@
+VAMAS Surface Chemical Analysis Standard Data Transfer Format 2008 May 4
+
+
+
+
+1
+Experiment Type: XPS
+NORM
+REGULAR
+1
+0
+0
+0
+0
+0
+1
+
+
+2008
+4
+11
+16
+12
+29
+0
+0
+XPS
+
+1253.6
+300.0
+1E37
+1E37
+1E37
+1E37
+FAT
+5.00
+5.0
+4.500
+1E37
+2400
+1200
+1E37
+1E37
+
+
+-1
+kinetic energy
+eV
+192.0
+0.100
+1
+count rate
+c/s
+pulse counting
+0.100
+1
+70E-9
+1E37
+1E37
+1E37
+0
+10
+59471
+84709
+60107
+60592
+60340
+60581
+60892
+60560
+59975
+60153
+60551
+60424
+end of experiment

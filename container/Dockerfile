@@ -1,6 +1,8 @@
-# Python Version: 3.11
-# python:3.11-slim-bookworm for linux/amd64
-FROM python@sha256:fc39d2e68b554c3f0a5cb8a776280c0b3d73b4c04b83dbade835e2a171ca27ef
+## Python Version:3.12
+FROM python:3.12-slim-trixie
+
+
+ARG PIP_TRUSTED_HOST
 
 # Create app directory
 WORKDIR /app
@@ -12,7 +14,7 @@ ENV LANG=ja_JP.UTF-8 LANGUAGE=ja_JP:ja LC_ALL=ja_JP.UTF-8 TZ=JST-9 TERM=xterm
 
 # Installation of python's library
 COPY requirements.txt /app
-RUN pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host=files.pythonhosted.org --upgrade pip
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Copy program or settings

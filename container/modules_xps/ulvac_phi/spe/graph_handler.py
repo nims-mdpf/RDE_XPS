@@ -24,6 +24,8 @@ class GraphPlotter(XpsGraphPlotter):
     REVERSE_NOT_INCLUDED = 1
     ATOMS_COUNTS_DATA = 1
     COLUMNS_COUNTS_DATA = 3
+    TYPE_OF_CPS = 0
+    TYPE_OF_COUNTS = 1
     TYPES_OF_CPS_AND_COUNTS = 2
 
     def __init__(self) -> None:
@@ -58,7 +60,7 @@ class GraphPlotter(XpsGraphPlotter):
         file_base_name, ____ = os.path.splitext(os.path.basename(resource_paths.struct.joinpath(f"{resource_paths.rawfiles[0].stem}.csv")))
 
         # plot main image
-        self._plot_main_image(data_atoms, resource_paths, file_base_name, plot_options)
+        self._plot_main_image(data_atoms, resource_paths, file_base_name, plot_options, make_other_images)
         # plot other images
         if make_other_images:
             self._plot_other_image(data_atoms, resource_paths, file_base_name, plot_options)
@@ -121,6 +123,7 @@ class GraphPlotter(XpsGraphPlotter):
         resource_paths: RdeOutputResourcePath,
         file_base_name: str,
         plot_options: dict,
+        make_other_images: bool,
     ) -> None:
         """Plot main image.
 
@@ -129,6 +132,7 @@ class GraphPlotter(XpsGraphPlotter):
             resource_paths (RdeOutputResourcePath): List of RDE output paths.
             file_base_name (str): Output file name.
             plot_options (dict): Plot options data.
+            make_other_images (bool): Multiple samples are available.
 
         Raises:
             StructuredError: Error(csv columns are invalid).
@@ -139,7 +143,7 @@ class GraphPlotter(XpsGraphPlotter):
             raise StructuredError(err_msg)
 
         file_path_main_image = os.path.join(resource_paths.main_image, f"{file_base_name}.png")
-        self._write_graph_main_image(data_atoms, plot_options, plot_options["title"], file_path_main_image)
+        self._write_graph_main_image(data_atoms, plot_options, plot_options["title"], file_path_main_image, make_other_images)
 
     def _plot_other_image(
         self,
@@ -164,7 +168,7 @@ class GraphPlotter(XpsGraphPlotter):
             err_msg = "ERROR in graph_handler: csv columns are invalid"
             raise StructuredError(err_msg)
 
-        for legend, data_atom_org in zip(plot_options["legend"], data_atoms_org):
+        for legend, data_atom_org in zip(plot_options["legend"], data_atoms_org, strict=False):
             df_atom = data_atom_org['df'].astype(float)
             graph_title_other_image = f"{file_base_name}_{legend}"
             file_path_other_image = os.path.join(resource_paths.other_image, f"{file_base_name}_{legend}.png")
@@ -176,6 +180,7 @@ class GraphPlotter(XpsGraphPlotter):
         plot_options: dict,
         graph_title_org: str,
         png_file_path: str,
+        make_other_images: bool,
     ) -> None:
         """Write graph image from Intensity cps.
 
@@ -184,6 +189,7 @@ class GraphPlotter(XpsGraphPlotter):
             plot_options (dict): Plot options data.
             graph_title_org (str): Graph title.
             png_file_path (Path): Output file path.
+            make_other_images (bool): Multiple samples are available.
 
         """
         # Titles should be abbreviated to no more than 35 characters.
@@ -193,42 +199,51 @@ class GraphPlotter(XpsGraphPlotter):
 
         show_legend = not (len(data_atoms) <= self.ATOMS_COUNTS_DATA)
 
-        fig = plt.figure(figsize=(6.4, 4.8))
-        ax = fig.add_subplot(1, 1, 1)
-        fig.subplots_adjust(left=0.17, bottom=0.155, right=0.95, top=0.9, wspace=None, hspace=None)
+        for i in range(self.TYPES_OF_CPS_AND_COUNTS):
+            fig = plt.figure(figsize=(6.4, 4.8))
+            ax = fig.add_subplot(1, 1, 1)
+            fig.subplots_adjust(left=0.17, bottom=0.155, right=0.95, top=0.9, wspace=None, hspace=None)
 
-        ax = self._set_ax_option(ax, plot_options, graph_title_short, is_counts=False)
+            ax = self._set_ax_option(ax, plot_options, graph_title_short, is_counts=(i == self.TYPE_OF_COUNTS))
 
-        x_factor = plot_options.get("scaleFactor_x", 1.0)
-        y_factor = plot_options.get("scaleFactor_y", 1.0)
-        min_c = 0
-        max_c = 0
-        for i_legend, data_atom_org in enumerate(data_atoms):
-            df = data_atom_org['df'].astype(float)
-            ax.plot(
-                x_factor * df.iloc[:, 0],
-                y_factor * df.iloc[:, 1],
-                lw=1,
-                label=plot_options["legend"][int(i_legend)],
+            x_factor = plot_options.get("scaleFactor_x", 1.0)
+            y_factor = plot_options.get("scaleFactor_y", 1.0)
+            min_c = 0
+            max_c = 0
+            for i_legend, data_atom_org in enumerate(data_atoms):
+                df = data_atom_org['df'].astype(float)
+                ax.plot(
+                    x_factor * df.iloc[:, 0],      # 0:Binding Energy (eV)
+                    y_factor * df.iloc[:, 1 + i],  # 1:Intensity (cps), 2:Intensity (counts)
+                    lw=1,
+                    label=plot_options["legend"][int(i_legend)],
+                )
+                temp_c = y_factor * df.iloc[:, 2].min()
+                min_c = min(temp_c, min_c)
+                temp_c = y_factor * df.iloc[:, 2].max()
+                max_c = max(max_c, temp_c)
+            if show_legend:
+                ax.legend()
+
+            ax.set_xlim(
+                xmin=self._get_scalar_float(plot_options, "xmin"),
+                xmax=self._get_scalar_float(plot_options, "xmax"),
             )
-            temp_c = y_factor * df.iloc[:, 2].min()
-            min_c = min(temp_c, min_c)
-            temp_c = y_factor * df.iloc[:, 2].max()
-            max_c = max(max_c, temp_c)
-        if show_legend:
-            ax.legend()
+            ax.set_ylim(
+                ymin=self._get_scalar_float(plot_options, "ymin"),
+                ymax=self._get_scalar_float(plot_options, "ymax"),
+            )
+            fig.tight_layout()
+            if i == 0:
+                fig.savefig(png_file_path)
+            else:
+                png_file_path_count = \
+                    png_file_path.replace("main_image", "other_image").replace(".png", "_count.png")
+                fig.savefig(Path(png_file_path_count))
+            plt.close(fig)
 
-        ax.set_xlim(
-            xmin=self._get_scalar_float(plot_options, "xmin"),
-            xmax=self._get_scalar_float(plot_options, "xmax"),
-        )
-        ax.set_ylim(
-            ymin=self._get_scalar_float(plot_options, "ymin"),
-            ymax=self._get_scalar_float(plot_options, "ymax"),
-        )
-        fig.tight_layout()
-        fig.savefig(png_file_path)
-        plt.close(fig)
+            if not make_other_images:
+                break
 
     def _write_graph_other_image(
         self,
@@ -255,42 +270,33 @@ class GraphPlotter(XpsGraphPlotter):
         # If the number of columns is 3, there is only one series, so the legend is not displayed.
         show_legend = not (len(df_atom.columns) <= self.COLUMNS_COUNTS_DATA)
 
-        for i in range(self.TYPES_OF_CPS_AND_COUNTS):
-            fig = plt.figure(figsize=(6.4, 4.8))
-            ax = fig.add_subplot(1, 1, 1)
-            fig.subplots_adjust(
-                left=0.17, bottom=0.155, right=0.95, top=0.9, wspace=None, hspace=None,
+        fig = plt.figure(figsize=(6.4, 4.8))
+        ax = fig.add_subplot(1, 1, 1)
+        fig.subplots_adjust(
+            left=0.17, bottom=0.155, right=0.95, top=0.9, wspace=None, hspace=None,
+        )
+
+        ax = self._set_ax_option(ax, plot_options, graph_title_short, is_counts=False)
+
+        x_factor = plot_options.get("scaleFactor_x", 1.0)
+        y_factor = plot_options.get("scaleFactor_y", 1.0)
+        for i_legend in range(0, len(df_atom.columns), 3):
+            ax.plot(
+                x_factor * df_atom.iloc[:, i_legend],
+                y_factor * df_atom.iloc[:, i_legend + 1],
+                lw=1,
             )
+        if show_legend:
+            ax.legend()
 
-            is_counts = i != 0  # 0:cps, 1:counts
-
-            ax = self._set_ax_option(ax, plot_options, graph_title_short, is_counts=is_counts)
-
-            x_factor = plot_options.get("scaleFactor_x", 1.0)
-            y_factor = plot_options.get("scaleFactor_y", 1.0)
-            for i_legend in range(0, len(df_atom.columns), 3):
-                ax.plot(
-                    x_factor * df_atom.iloc[:, i_legend],
-                    y_factor * df_atom.iloc[:, i_legend + i + 1],
-                    lw=1,
-                    label=plot_options["legend"][int(i_legend / 3)],
-                )
-            if show_legend:
-                ax.legend()
-
-            ax.set_xlim(
-                xmin=self._get_scalar_float(plot_options, "xmin"),
-                xmax=self._get_scalar_float(plot_options, "xmax"),
-            )
-            ax.set_ylim(
-                ymin=self._get_scalar_float(plot_options, "ymin"),
-                ymax=self._get_scalar_float(plot_options, "ymax"),
-            )
-            fig.tight_layout()
-            if i == 0:
-                fig.savefig(png_file_path)
-            else:
-                png_file_path_count = \
-                    png_file_path.replace("main_image", "other_image").replace(".png", "_count.png")
-                fig.savefig(Path(png_file_path_count))
-            plt.close(fig)
+        ax.set_xlim(
+            xmin=self._get_scalar_float(plot_options, "xmin"),
+            xmax=self._get_scalar_float(plot_options, "xmax"),
+        )
+        ax.set_ylim(
+            ymin=self._get_scalar_float(plot_options, "ymin"),
+            ymax=self._get_scalar_float(plot_options, "ymax"),
+        )
+        fig.tight_layout()
+        fig.savefig(png_file_path)
+        plt.close(fig)

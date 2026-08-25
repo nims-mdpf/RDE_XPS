@@ -16,7 +16,7 @@
         "schema": {
             "type": "string"
         },
-        "original_name": "operator_identifier"
+        "originalName": "operator_identifier"
     },
     "institution_identifier": {
         "name": {
@@ -26,7 +26,7 @@
         "schema": {
             "type": "string"
         },
-        "original_name": "institution_identifier"
+        "originalName": "institution_identifier"
     },
     "measurement_technique": {
         "name": {
@@ -36,8 +36,8 @@
         "schema": {
             "type": "string"
         },
-        "variable": 1,
-        "original_name": "technique"
+        "originalName": "technique",
+        "variable": 1
     },
     "measurement_instrument": {
         "name": {
@@ -47,7 +47,7 @@
         "schema": {
             "type": "string"
         },
-        "original_name": "instrument_model_identifier"
+        "originalName": "instrument_model_identifier"
     },
     "experiment_id": {
         "name": {
@@ -57,7 +57,7 @@
         "schema": {
             "type": "string"
         },
-        "original_name": "experiment_identifier"
+        "originalName": "experiment_identifier"
     },
     "operation_date_time_year": {
         "name": {
@@ -67,8 +67,8 @@
         "schema": {
             "type": "integer"
         },
-        "variable": 1,
-        "original_name": "year_in_full"
+        "originalName": "year_in_full",
+        "variable": 1
     },
     "operation_date_time_month": {
         "name": {
@@ -78,8 +78,8 @@
         "schema": {
             "type": "integer"
         },
-        "variable": 1,
-        "original_name": "month"
+        "originalName": "month",
+        "variable": 1
     },
     "operation_date_time_day": {
         "name": {
@@ -89,8 +89,8 @@
         "schema": {
             "type": "integer"
         },
-        "variable": 1,
-        "original_name": "day_of_month"
+        "originalName": "day_of_month",
+        "variable": 1
     },
     "operation_date_time_hour": {
         "name": {
@@ -100,8 +100,8 @@
         "schema": {
             "type": "integer"
         },
-        "variable": 1,
-        "original_name": "hours"
+        "originalName": "hours",
+        "variable": 1
     },
     "operation_date_time_minute": {
         "name": {
@@ -111,8 +111,8 @@
         "schema": {
             "type": "integer"
         },
-        "variable": 1,
-        "original_name": "minutes"
+        "originalName": "minutes",
+        "variable": 1
     },
     "operation_date_time_second": {
         "name": {
@@ -122,8 +122,8 @@
         "schema": {
             "type": "integer"
         },
-        "variable": 1,
-        "original_name": "seconds"
+        "originalName": "seconds",
+        "variable": 1
     },
     "experiment_mode": {
         "name": {
@@ -133,7 +133,7 @@
         "schema": {
             "type": "string"
         },
-        "original_name": "experiment_mode"
+        "originalName": "experiment_mode"
     },
     "peak_name": {
         "name": {
@@ -143,8 +143,8 @@
         "schema": {
             "type": "string"
         },
-        "variable": 1,
-        "original_name": "species_label"
+        "originalName": "species_label",
+        "variable": 1
     },
     "transitions": {
         "name": {
@@ -154,8 +154,8 @@
         "schema": {
             "type": "string"
         },
-        "variable": 1,
-        "original_name": "transition_or_charge_state_label"
+        "originalName": "transition_or_charge_state_label",
+        "variable": 1
     },
     "pass_energy": {
         "name": {
@@ -165,10 +165,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "analyser_pass_energy_or_retard_ratio_or_mass_resolution",
         "unit": "eV",
-        "variable": 1,
-        "original_name": "analyser_pass_energy_or_retard_ratio_or_mass_resolution",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "abscissa_start": {
         "name": {
@@ -178,10 +178,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "abscissa_start",
         "unit": "eV",
-        "variable": 1,
-        "original_name": "abscissa_start",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "abscissa_end": {
         "name": {
@@ -192,8 +192,8 @@
             "type": "string"
         },
         "unit": "eV",
-        "variable": 1,
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "abscissa_increment": {
         "name": {
@@ -203,10 +203,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "abscissa_increment",
         "unit": "eV",
-        "variable": 1,
-        "original_name": "abscissa_increment",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "collection_time": {
         "name": {
@@ -216,10 +216,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "signal_collection_time",
         "unit": "s",
-        "variable": 1,
-        "original_name": "signal_collection_time",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "measurement_acquisition_number_per_peak_sweep": {
         "name": {
@@ -229,9 +229,9 @@
         "schema": {
             "type": "string"
         },
-        "variable": 1,
-        "original_name": "number_of_scans_to_compile_this_block",
-        "original_type": "number"
+        "originalName": "number_of_scans_to_compile_this_block",
+        "originalType": "number",
+        "variable": 1
     },
     "scan_mode": {
         "name": {
@@ -241,7 +241,7 @@
         "schema": {
             "type": "string"
         },
-        "original_name": "scan_mode"
+        "originalName": "scan_mode"
     },
     "sample_identifier": {
         "name": {
@@ -251,8 +251,8 @@
         "schema": {
             "type": "string"
         },
-        "variable": 1,
-        "original_name": "sample_identifier"
+        "originalName": "sample_identifier",
+        "variable": 1
     },
     "number_of_lines_in_block_comment": {
         "name": {
@@ -262,9 +262,9 @@
         "schema": {
             "type": "string"
         },
-        "variable": 1,
-        "original_name": "number_of_lines_in_block_comment",
-        "original_type": "number"
+        "originalName": "number_of_lines_in_block_comment",
+        "originalType": "number",
+        "variable": 1
     },
     "block_comment": {
         "name": {
@@ -274,8 +274,8 @@
         "schema": {
             "type": "string"
         },
-        "variable": 1,
-        "original_name": "block_comment"
+        "originalName": "block_comment",
+        "variable": 1
     },
     "xray_power": {
         "name": {
@@ -285,10 +285,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "analysis_source_characteristic_energy",
         "unit": "W",
-        "variable": 1,
-        "original_name": "analysis_source_characteristic_energy",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "analyzer_mode": {
         "name": {
@@ -298,8 +298,8 @@
         "schema": {
             "type": "string"
         },
-        "variable": 1,
-        "original_name": "analyser_mode"
+        "originalName": "analyser_mode",
+        "variable": 1
     },
     "analyzer_work_function": {
         "name": {
@@ -309,10 +309,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "analyser_work_function_or_acceptance_energy_of_atom_or_ion",
         "unit": "eV",
-        "variable": 1,
-        "original_name": "analyser_work_function_or_acceptance_energy_of_atom_or_ion",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "xray_analyzer_angle": {
         "name": {
@@ -322,10 +322,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "analyser_axis_take_off_polar_angle",
         "unit": "deg",
-        "variable": 1,
-        "original_name": "analyser_axis_take_off_polar_angle",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "analyzer_solid_angle": {
         "name": {
@@ -335,10 +335,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "analyser_axis_take_off_azimuth",
         "unit": "sr",
-        "variable": 1,
-        "original_name": "analyser_axis_take_off_azimuth",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "analysis_width_x": {
         "name": {
@@ -348,10 +348,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "analysis_width_x",
         "unit": "um",
-        "variable": 1,
-        "original_name": "analysis_width_x",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "analysis_width_y": {
         "name": {
@@ -361,10 +361,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "analysis_width_y",
         "unit": "um",
-        "variable": 1,
-        "original_name": "analysis_width_y",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "values_of_experimental_variables": {
         "name": {
@@ -374,8 +374,8 @@
         "schema": {
             "type": "string"
         },
-        "variable": 1,
-        "original_name": "values_of_experimental_variables"
+        "originalName": "values_of_experimental_variables",
+        "variable": 1
     },
     "analysis_source_label": {
         "name": {
@@ -385,8 +385,8 @@
         "schema": {
             "type": "string"
         },
-        "variable": 1,
-        "original_name": "analysis_source_label"
+        "originalName": "analysis_source_label",
+        "variable": 1
     },
     "analysis_source_characteristics_energy": {
         "name": {
@@ -396,10 +396,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "analysis_source_characteristic_energy",
         "unit": "eV",
-        "variable": 1,
-        "original_name": "analysis_source_characteristic_energy",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "analysis_source_strength": {
         "name": {
@@ -409,10 +409,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "analysis_source_strength",
         "unit": "W",
-        "variable": 1,
-        "original_name": "analysis_source_strength",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "analysis_source_beam_width_x": {
         "name": {
@@ -422,10 +422,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "analysis_source_beam_width_x",
         "unit": "um",
-        "variable": 1,
-        "original_name": "analysis_source_beam_width_x",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "analysis_source_beam_width_y": {
         "name": {
@@ -435,10 +435,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "analysis_source_beam_width_y",
         "unit": "um",
-        "variable": 1,
-        "original_name": "analysis_source_beam_width_y",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "analysis_source_polar_angle_of_incidence": {
         "name": {
@@ -448,10 +448,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "analysis_source_polar_angle_of_incidence",
         "unit": "deg",
-        "variable": 1,
-        "original_name": "analysis_source_polar_angle_of_incidence",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "analysis_source_azimuth": {
         "name": {
@@ -461,10 +461,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "analysis_source_azimuth",
         "unit": "deg",
-        "variable": 1,
-        "original_name": "analysis_source_azimuth",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "target_bias": {
         "name": {
@@ -474,10 +474,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "target_bias",
         "unit": "V",
-        "variable": 1,
-        "original_name": "target_bias",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "abscissa_label": {
         "name": {
@@ -509,8 +509,8 @@
         "schema": {
             "type": "string"
         },
-        "variable": 1,
-        "original_name": "signal_mode"
+        "originalName": "signal_mode",
+        "variable": 1
     },
     "signal_time_correction": {
         "name": {
@@ -520,10 +520,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "signal_time_correction",
         "unit": "s",
-        "variable": 1,
-        "original_name": "signal_time_correction",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "sample_normal_polar_angle_of_tilt": {
         "name": {
@@ -533,10 +533,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "sample_normal_polar_angle_of_tilt",
         "unit": "deg",
-        "variable": 1,
-        "original_name": "sample_normal_polar_angle_of_tilt",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "sample_normal_tilt_azimuth": {
         "name": {
@@ -546,10 +546,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "sample_normal_tilt_azimuth",
         "unit": "deg",
-        "variable": 1,
-        "original_name": "sample_normal_tilt_azimuth",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "sample_rotation_angle": {
         "name": {
@@ -559,10 +559,10 @@
         "schema": {
             "type": "string"
         },
+        "originalName": "sample_rotation_angle",
         "unit": "deg",
-        "variable": 1,
-        "original_name": "sample_rotation_angle",
-        "original_type": "number"
+        "originalType": "number",
+        "variable": 1
     },
     "number_of_ordinate_values": {
         "name": {
@@ -572,9 +572,9 @@
         "schema": {
             "type": "string"
         },
-        "variable": 1,
-        "original_name": "number_of_ordinate_values",
-        "original_type": "number"
+        "originalName": "number_of_ordinate_values",
+        "originalType": "number",
+        "variable": 1
     },
     "comment": {
         "name": {
@@ -584,6 +584,6 @@
         "schema": {
             "type": "string"
         },
-        "original_name": "comment"
+        "originalName": "comment"
     }
 }

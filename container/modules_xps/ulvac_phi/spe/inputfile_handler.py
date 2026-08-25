@@ -55,7 +55,7 @@ class FileReader(XpsFileReader):
 
         x_label = self.meta.get("xlabel", "x")
         y_label = self.meta.get("ylabel", "y")
-        for data_single, data_block in zip(data_org, data_blocks):
+        for data_single, data_block in zip(data_org, data_blocks, strict=False):
             file_name_ext = data_block["AtomicName"]
             if isinstance(self.meta["SpectralRegDef"], list):
                 collection_time = [tokens[10] for tokens in self.meta["SpectralRegDef"] if tokens[2] == file_name_ext]
@@ -87,9 +87,9 @@ class FileReader(XpsFileReader):
             out_dir = PureWindowsPath(resource_paths.struct)
         else:
             cmds = []
-            file_path_input = resource_paths.rawfiles[0]  # type: ignore
-            log_dir = resource_paths.logs  # type: ignore
-            out_dir = resource_paths.struct  # type: ignore
+            file_path_input = resource_paths.rawfiles[0]
+            log_dir = resource_paths.logs
+            out_dir = resource_paths.struct
 
         cmds += [
             str(self.MPEXPORT_BINPATH),
